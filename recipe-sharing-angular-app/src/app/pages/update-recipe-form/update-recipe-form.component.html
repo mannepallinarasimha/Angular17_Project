@@ -1,0 +1,38 @@
+<div>
+    <h6 class="text-center">Update Recipe Item: {{recipeItem.id}}</h6>
+    <form (ngSubmit)="onSubmit()" class="w-[27rem] p-6 rounded-lg shadow-md">
+       
+        <div class="mb-4">
+            <mat-form-field class="w-full">
+                <mat-label >Title</mat-label>
+                <input matInput placeholder="Title..." value="recipeItem.title" name="title" [(ngModel)]="recipeItem.title">
+              </mat-form-field>
+        </div>
+        <div class="mb-4">
+            <mat-form-field class="w-full">
+                <mat-label >Description</mat-label>
+                <input matInput placeholder="Description..." value="recipeItem.description" name="description" [(ngModel)]="recipeItem.description">
+              </mat-form-field>
+        </div>
+
+        <div class="mb-4">
+            <mat-form-field class="w-full">
+                <mat-label >Image</mat-label>
+                <input matInput placeholder="Image..." value="recipeItem.image" name="image" [(ngModel)]="recipeItem.image">
+              </mat-form-field>
+        </div>
+        <div class="mb-4">
+                <mat-radio-group [(ngModel)]="recipeItem.foodType" value="recipeItem.foodType" name="foodType" aria-label="Select an option">
+                    <mat-radio-button value="veg">Vegitarien</mat-radio-button>
+                    <mat-radio-button value="Non-Veg">Non Vegitarien</mat-radio-button>
+                  </mat-radio-group>
+             
+        </div>
+          <div >
+            <button style="background-color: rgb(255, 0, 144);" mat-raised-button color="primary" type="submit">
+                Update
+            </button>
+        </div>
+    </form>
+
+</div>

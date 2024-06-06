@@ -1,0 +1,27 @@
+
+<mat-card class="example-card">
+    <mat-card-header>
+      <!-- <div mat-card-avatar class="example-header-image"></div> -->
+      <img mat-card-avatar src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="">
+      <mat-card-title>{{recipe.user.fullName}}</mat-card-title>
+      <mat-card-subtitle>Code_with_narasimha</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image  class="max-h-[400px] object-cover" [src]="recipe.image" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>{{recipe.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions class="flex justify-between">
+        <div>
+            <button mat-icon-button ><mat-icon>favorite</mat-icon></button> &nbsp;&nbsp;
+
+            <button mat-icon-button (click)="handleOpenUpdateRecipe()"><mat-icon>edit</mat-icon></button>&nbsp;&nbsp;
+
+            <button mat-icon-button><mat-icon>share</mat-icon></button>
+        </div>
+        <div>
+            <button mat-icon-button (click)="handleDeleteRecipe()"><mat-icon >delete</mat-icon></button>
+        </div>
+
+    </mat-card-actions>
+  </mat-card>
